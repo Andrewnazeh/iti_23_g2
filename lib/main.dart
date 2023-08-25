@@ -1,4 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
+import 'icons/icon.dart';
 //andrew nazeh aziz
 //iti flutter
 void main() {
@@ -23,35 +26,92 @@ const HomeScreen({super.key});
 
 @override
 Widget build(BuildContext context) {
-return Scaffold(
-appBar: AppBar(),
-body: Center(
-child: Container(
-height: 200,
-width: 300,
-decoration: BoxDecoration(
-color: Colors.green,
-borderRadius:BorderRadius.circular(20) ,
-),
+return Scaffold( appBar: AppBar(backgroundColor: Colors.green),
+body:  Padding(padding: EdgeInsets.all(10),
+    child: SingleChildScrollView(
+      child: Column(
+        children: [Row(
+          children: [Icon(Icons.lock,color: Colors.green,),
+            SizedBox(width: 30,),Text("Locked Chat ",
+              style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold),),
+          ],), const SizedBox(
+          height: 20,
+        ),
+          Row(
+            children: [Icon(Icons.archive,color: Colors.green,),
+              const SizedBox(width: 20,),
+              Text("Archived", style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold)),
+              Spacer(),Text("20")
+            ],),
+          const SizedBox(
+            height: 20,
+          ),
+          Row(
+            children: [CircleAvatar(
+              backgroundImage: NetworkImage(iconAvatar),
+            ),
+              const SizedBox(width: 20,),
+              Text("Andrew nazeh", style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold)),
+              Spacer(),Text("20:50")
+            ],), const SizedBox(
+            height: 20,
+          ),
+          Row(
+            children: [CircleAvatar(
+              backgroundImage: NetworkImage(iconAvatar2)),
+              const SizedBox(width: 20,),
+              Text("Andrew nazeh", style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold)),
+              Spacer(),Text("20:50")
+            ],), const SizedBox(
+            height: 20,
+          ),
+          Row(
+            children: [CircleAvatar(
+              backgroundImage: NetworkImage(iconAvatar3),),
+              const SizedBox(width: 20,),
+              Text("Andrew nazeh", style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold)),
+              Spacer(),Text("20:50")
+            ],),
+                  ],
+       ),
 
-child: Center(
 
-child:
+    )),
 
 
-Text(
-"Hello world",
-style: TextStyle(
-fontSize: 20,
-color: Colors.white,
-),
-),
-),
-),
-),
-);
-}
-}
+
+);}}
+
+
+//
+// appBar: AppBar(),
+// body: Center(
+// child: Container(
+// height: 200,
+// width: 300,
+// decoration: BoxDecoration(
+// color: Colors.red,
+// borderRadius:BorderRadius.circular(20) ,
+// ),
+//
+// child: Center(
+//
+// child:
+//
+//
+// Text(
+// "Hello world",
+// style: TextStyle(
+// fontSize: 20,
+// color: Colors.white,
+// ),
+// ),
+// ),
+// ),
+// ),
+// );
+// }
+// }
 
 
 
